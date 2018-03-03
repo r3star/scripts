@@ -1,0 +1,17 @@
+#!/bin/bash
+
+for i in $(free > memory.txt | cat /proc/stat > cpu.txt) {1..10}  
+do
+sleep 1
+done
+
+
+for ii in $(cat /var/log/messages > messages.txt | jornalctl -p err > erors.txt) # (jornalctl -p err > erors.txt) мб так правильнее?
+do
+sleep 
+done
+
+for iii in $(ifconfig > seti.txt) # без цыкла будет проще?
+do
+sleep 
+done
