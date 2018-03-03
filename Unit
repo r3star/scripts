@@ -1,0 +1,12 @@
+[Unit]
+Description=mace log file ^^
+After=syslog.target
+ 
+[Service]
+ 
+ExecStart=/bin/bash '/restar/scripts/restar2.sh'
+Type=forking
+ 
+[Install]
+WantedBy=multi-user.target
+Alias=bash.service
