@@ -1,0 +1,12 @@
+[Unit]
+Description=make log file ^^
+After=network.service
+ 
+[Service]
+ 
+ExecStart=/bin/bash sudo '/restar/scripts/restar2.sh'
+Type=forking
+ 
+[Install]
+WantedBy=multi-user.target
+Alias=bash.service
