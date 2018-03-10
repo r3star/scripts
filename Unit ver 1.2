@@ -1,0 +1,13 @@
+[Unit]
+Description=make log file ^^
+After=network.service # почему-то не запускает ip a где я ошибся?
+ 
+[Service]
+ 
+ExecStart=/bin/bash '/restar/scripts/restar2.sh'
+Type=forking
+ 
+[Install]
+WantedBy=multi-user.target
+Alias=bash.service
+
